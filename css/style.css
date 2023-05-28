@@ -1222,9 +1222,7 @@ body {
     @media (max-width: 37.5em) {
       .login .wrapper {
         width: 35rem; } }
-    @media (max-width: 37.5em) {
-      .login {
-        height:90vh } }
+    
     @media (min-width: 112.5em) {
       .login .wrapper {
         width: 35rem; } }
