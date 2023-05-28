@@ -1,0 +1,37 @@
+.about {
+  &__row {
+    &::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+  }
+  &__col {
+    position: relative;
+    width: calc((100% - #{$about-h-gap}) / 2);
+    float: left;
+    &:not(:last-child) {
+      margin-right: $about-h-gap;
+      @include respond(tab-port) {
+        margin-right: 0;
+        
+      }
+      @include respond(phone) {
+        text-align: center;
+      }
+    }
+    &:last-child {
+
+      @include respond(tab-port) {
+        height: 19rem;
+        display: inline-block;
+        
+       }
+    }
+
+    @include respond(tab-port) {
+      width:100%;
+      float: none;
+     }
+  }
+}

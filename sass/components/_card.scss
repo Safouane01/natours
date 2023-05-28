@@ -1,0 +1,207 @@
+.feature {
+  &__card {
+    height: 23rem;
+    background-color: rgba(255,255,255, .7);
+    padding:2.2rem 1.5rem;
+    border-radius: 3px;
+    box-shadow: 0 1.2rem 2rem rgba(0,0,0, .3);
+    transition: all .2s;
+
+    &:hover{
+      transform: translateY(-2rem) scale(1.1);
+      box-shadow: 0 .5rem 1rem rgba(0,0,0, .3);
+
+    }
+
+    @include respond(tab-port) {
+      padding: 2rem 2.5rem;
+    }
+    @include respond(phone) {
+      height: 25rem;
+      padding: 2rem 2.5rem;
+    }
+  }
+  &__paragraph {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: darken($color-grey, 5%);
+}
+& i {
+  font-size: 4.5rem;
+  background: linear-gradient(
+    to right,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+}
+
+// tours cards
+
+.tours {
+  &__card {
+    height: 38rem;
+    perspective: 45rem;
+
+    @include respond(tab-port) {
+      height: 60rem;
+      box-shadow: 0 1.5rem 4rem rgba(0,0,0, .2);
+
+    }
+    
+     
+    &-side {
+      height: 100%;
+      border-radius: 3px;
+      transition: all .7s;
+      box-shadow: 0 1.5rem 4rem rgba(0,0,0, .2);
+      backface-visibility: hidden;
+      overflow: hidden;
+
+      @include respond(tab-port) {
+        height: 68%;
+        background-color: white;
+        box-shadow: none;
+        
+      }
+    }
+    &-front {
+      background-color: rgba(255,255,255, .7); 
+      @include respond(tab-port) {
+        
+      }
+    }
+    &-back {
+      padding: 10rem 2rem;
+      position: absolute;
+      top:0;
+      transform: rotateY(180deg);  
+      &--1 {
+        background-image: linear-gradient(to bottom right, rgba(253, 152, 0, 0.6),rgb(253, 126, 0));
+      }
+      &--2 {
+        background-image: linear-gradient(to bottom right, rgba($color-primary, .6),rgba($color-primary-dark,1));
+      }
+      &--3 {
+        background-image: linear-gradient(to bottom right, rgba(27, 118, 255, .6), rgb(27, 84, 255));
+      }
+
+      @include respond(tab-port) {
+        height: 40%;
+        position: relative;
+        top:-4rem;
+        transform: rotateY(0);
+        padding: 3rem 2rem 1rem 2rem;
+        clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
+      }
+    }
+    &:hover &-front  {
+      transform: rotateY(-180deg);
+
+      @include respond(tab-port) {
+        transform: rotate(0);
+      }
+    }
+    &:hover &-back  {
+      transform: rotateY(0deg);
+    }
+
+  }
+  &__img {
+    width:100%;
+    height: 17rem;
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    background-blend-mode: screen;
+  }
+  &--img-1 {
+    background-image: url(/img/nat-5.jpg);
+    background-color: rgba(253, 152, 0, 0.6);
+  }
+  &--img-2 {
+    background-image: url(/img/nat-6.jpg);
+    background-color:  rgba($color-primary, .6);
+  }
+  &--img-3 {
+    background-image: url(/img/nat-7.jpg);
+    background-color:  rgba(27, 118, 255, .6);    
+  }
+  
+}
+
+//testemonie card
+
+.stories {
+  &__testemonie-box {
+    width:75%;
+    margin-inline: auto;
+    background-color: rgba(255, 255, 255, 0.5);
+    transform: skewX(-15deg);
+    padding: 4rem 4rem;
+    border-radius: 3px;
+    &:hover .stories__img{
+      transform: scale(1);
+      filter: blur(2.5px) brightness(.8);
+    }
+
+    &:hover .stories__img-name {
+      transform: translate(-50%,-50%);
+    }
+
+    @include respond(tab-port) {
+      width: 95%;
+    }
+    @include respond(phone) {
+      width: 65%;
+      min-width: 38em;
+      transform: skewX(0);
+
+    }
+
+    
+    
+  }
+
+  &__row {
+    transform: skewX(15deg);
+
+    @include respond(phone) {
+      transform: skewX(0);
+    }
+  }
+
+  &__img-box {
+    overflow: hidden;
+    margin-right: $stories-h-gap;
+    width:12rem;
+    height: 12rem;
+    clip-path: circle(50%);
+    position: relative;
+    float:left;
+    shape-outside: circle(50% at 50% 50%);
+  }
+  &__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transform: scale(1.4);
+    transition: all .4s ease;
+  }
+  &__img-name {
+    z-index: 10;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 600;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, 120%) ;
+    transition: all .4s ease;    
+    backface-visibility: hidden;
+  }
+
+
+}

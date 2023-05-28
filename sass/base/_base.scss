@@ -1,0 +1,31 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+
+  @include respond(tab-land) {
+    font-size: 56%;
+  }
+  @include respond(tab-port) {
+    font-size: 50%;
+  }
+}
+
+body {
+  padding: 2rem;
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
+
+}
+.container {
+  background-color: #f6f6f6;
+}

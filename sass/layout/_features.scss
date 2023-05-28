@@ -1,0 +1,46 @@
+.feature {
+  
+  &__card-container::after {
+    content: "";
+    display: block ;
+    clear: both;
+  }
+  &__card {
+    width: calc((100% - 3*#{$card-horizontal-gap})/4);
+    float:left;
+    &:not(:last-child) {
+      margin-right: $card-horizontal-gap;
+
+      @include respond(tab-port) {
+        margin-right: 0;
+        margin-bottom: 2rem;
+      }
+      @include respond(phone) {
+        margin-right: auto
+      }
+      
+    }
+    &:nth-child(odd) {
+      @include respond(tab-port) {
+        margin-right: 10*$card-horizontal-gap-small;
+        // margin-right: 4rem;
+      }
+      
+
+      @include respond(phone) {
+        margin-right: 5rem;
+
+      }
+    }
+
+    @include respond(tab-port) {
+      width: calc((95% - 10*#{$card-horizontal-gap-small})/2);
+      // float: none;
+    }
+    @include respond(phone) {
+      width:calc(47% - 3rem);
+      // float: none;
+      margin-inline: auto;
+    }
+  }
+}

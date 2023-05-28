@@ -1,0 +1,172 @@
+.navigation {
+
+  &__btn {
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    background-color: white;
+    position: fixed;
+    top:5.5rem;
+    right: 5rem;
+    z-index: 3000;
+    cursor: pointer;
+    box-shadow: 0 1rem 3rem rgba(0,0,0 ,.2);
+
+
+    //icon
+    &-bar {
+      display: block;
+      position: absolute;
+      top:50%;
+      left:50%;
+      transform: translate(-50%, -50%);
+      width: 45%;
+      height: .3rem;
+      background-color: $color-grey;
+      border-radius: 3px;
+      
+
+      &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      transform: translateY(.75rem);
+      width: 100%;
+      height: 100%;
+      background-color: $color-grey;
+      border-radius: 3px;
+      transition: all .3s;
+      }
+
+      &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      transform: translateY(-.75rem);
+      width: 100%;
+      height: 100%;
+      background-color: $color-grey;
+      border-radius: 3px;
+      transition: all .3s;
+      }
+      
+    }
+    //icon bar transform
+    &:hover &-bar::after {
+      transform: translateY(.9rem);
+    }
+    &:hover &-bar::before {
+      transform: translateY(-.9rem);
+    }
+
+
+    @include respond(tab-port) {
+      top:3rem;
+      right: 2.5rem;
+      height: 6rem;
+      width: 6rem;
+    }
+  }
+  //hide input checkbox
+  &__toggle {
+    display: none;
+  }
+  //background after click
+  &__toggle:checked ~ &__bg {
+    transform: scale(60);
+  }
+
+  //nav after click
+  &__toggle:checked ~ &__nav {
+    opacity: 1;
+    visibility: visible;
+    width: 100%;
+  }
+
+  //icon after click
+  &__toggle:checked ~ &__btn &__btn-bar {
+    visibility: hidden;
+  }
+  &__toggle:checked ~ &__btn &__btn-bar::after {
+    transform: rotate(45deg);
+    visibility: visible;
+  }
+  &__toggle:checked ~ &__btn &__btn-bar::before {
+    transform: rotate(-45deg);
+    visibility: visible;
+  }
+
+
+
+  &__bg {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    background-image: radial-gradient($color-primary-light, $color-primary-dark);
+    position: fixed;
+    top:6rem;
+    right: 5rem;
+    z-index: 1000;
+    transition: transform .4s cubic-bezier(0.83, 0, 0.17, 1);
+
+    @include respond(tab-port) {
+      top:3.5rem;
+      right: 3rem;
+      height: 5rem;
+      width: 5rem;
+    }
+  }
+
+  &__nav {
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 2000;
+    height: 100vh;
+    width: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  }
+  &__list {
+    display: inline-block;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    width: 100%;
+  }
+  &__item {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  &__link:link,
+  &__link:visited {
+    display: inline-block;
+    color:white;
+    text-decoration: none;
+    font-size: 3rem;
+
+    background-image: linear-gradient(120deg, transparent 0%,transparent 50% ,white 50%);
+    background-size: 220%;
+    background-position: 0%;
+    background-repeat: no-repeat;
+    padding: 1rem 2rem;
+    transition: all .4s ease;
+    
+    &:hover {
+      color:$color-primary;
+      background-position: 100%;
+      transform: translateX(1rem);
+    }
+    span {
+      margin-right: 1.5rem;
+    }
+
+    @include respond(phone) {
+      font-size: 2.5rem;
+    }
+  }
+}

@@ -1,0 +1,115 @@
+
+.footer {
+  padding: 7rem 16rem 12rem;
+  background-color: #2d2d2d;
+  &__row {
+    &::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+  }
+  &__col {
+    position: relative;
+    width: calc((100% - 15rem) / 2);
+    float: left;
+    &:not(:last-child) {
+      margin-right: 15rem;
+
+      @include respond(tab-port) {
+        margin-right: 0;
+        margin-bottom: 4rem;
+        text-align: center;
+      }
+    }
+
+    @include respond(tab-port) {
+      width:100%;
+      float: none;
+  
+    }
+
+    
+  }
+
+
+
+
+  &__logo {
+    height: 9rem;
+    margin-bottom: 6.5rem;
+
+
+    @include respond(tab-port) {
+      margin-bottom: 4.5rem;
+  
+    }
+    
+  }
+  &__nav {
+    display: inline-block;
+    list-style: none;
+    border-top: solid 1px rgba($color-grey, .5);
+    padding-top: .9rem;
+
+
+    &-elements {
+      float: left;
+      transition: all .2s ease;
+
+      
+      &:hover {
+        transform: scale(1.25) rotate(5deg);
+        background-color: #2d2d2d;
+        box-shadow: 0 1rem 1.2rem rgba(0,0,0, .5);
+      }
+
+      &:not(:last-child) {
+        margin-right: 1.4rem;
+      }
+    }
+    &-content {
+      text-decoration: none;
+      color:#f7f7f7;
+      font-size: 1.1rem;
+      font-weight: 600;
+      transition: all .2s ease;
+
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
+  &__copy-right-container {
+    display: inline-block;
+    border-top: solid 2px rgba($color-grey, .5);
+    padding-top: .9rem;
+    width: 38%;
+    
+
+    @include respond(tab-port) {
+      text-align: center;
+      max-width: 50rem;
+      display: block;
+
+      width:90%;  
+      margin:0 auto
+    }
+  }
+  &__copy-right {
+    display: inline-block;
+    color:white;
+    font-size: 1.2rem;
+    word-spacing: 4px;
+
+    @include respond(tab-port) {
+    }
+    
+  }
+
+  @include respond(tab-port) {
+    padding: 7rem 4rem 4rem;
+  }
+
+
+}

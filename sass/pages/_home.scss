@@ -1,0 +1,94 @@
+.about {
+  max-width: 85rem;
+  @include respond(tab-port) {
+    max-width: 65rem;
+  }
+  margin-inline: auto;
+  
+}
+.feature {
+  padding:15rem 0;
+  background-image: linear-gradient(to right, rgba($color-primary-light, .7), rgba($color-primary-dark,.8)), url(/img/nat-4.jpg);
+  background-size: cover;
+  background-position: top;
+  transform: skewY(-6deg);
+
+  @include respond(tab-port) {
+    transform: skewY(-5deg);
+  }
+
+  
+ 
+  &__card-container {
+    max-width: 85rem;
+    margin:0 auto;
+    transform: skewY(6deg);
+
+    @include respond(tab-port) {
+      max-width: 65rem;
+      transform: skewY(5deg);
+    }
+    @include respond(phone) {
+      max-width: 45rem;
+      padding-left: 3rem;
+    }
+  }
+
+  @include respond(tab-port) {
+    padding: 8rem 0;
+  }
+}
+
+.tours {
+  padding: 10rem 0;
+  &__card-container {
+    position: relative;
+    max-width: 85rem;
+    margin-inline:auto;
+
+    @include respond(tab-port) {
+      max-width: 70rem;
+      margin-inline: auto;
+    }
+    
+  }
+
+
+  @include respond(tab-port) {
+    padding: 3rem 0;
+    
+  }
+
+}
+
+.stories {
+  padding: 11rem 0;
+  position: relative;
+  &__container {
+    max-width: 85rem;
+    @include respond(tab-port) {
+      max-width: 65rem;
+    }
+    margin-inline: auto;
+    position: relative;
+  }
+
+  @include respond(tab-port) {
+    padding: 4rem 0;
+  }
+  
+}
+
+.booking {
+  padding: 30rem 0;
+  background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+
+  @include respond(tab-port) {
+    padding: 25rem 0;
+  }
+}
+
+
+
+
+

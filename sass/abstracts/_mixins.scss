@@ -1,0 +1,29 @@
+@mixin respond($device) {
+  @if $device == tab-land {
+    @media (max-width: 75em) {
+      // <1200px
+      @content;
+    }
+  }
+
+  @if $device == tab-port {
+    // <900px
+    @media (max-width: 56.25em) {
+      @content;
+    }
+  }
+
+  @if $device == phone {
+    // <600px
+    @media (max-width: 37.5em) {
+      @content;
+    }
+  }
+
+  @if $device == phone {
+    @media (min-width: 112.5em) {
+      // >1800px
+      @content;
+    }
+  }
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="/img/fav.png" type="image/x-icon">
+</head>
+<body class="login">
+  <div class="wrapper" id="wrapper">
+    <div class="title">
+       Login 
+    </div>
+    <form action="#" class="login__form">
+       <div class="field">
+          <input type="text" required class="field__input">
+          <label class="field__label">Email Address</label>
+       </div>
+       <div class="field">
+          <input type="password" required class="field__input">
+          <label class="field__label">Password</label>
+       </div>
+       <div class="content">
+          <div class="checkbox">
+             <input type="checkbox" id="remember-me">
+             <label for="remember-me">Remember me</label>
+          </div>
+          <div class="pass-link">
+             <a href="#">Forgot password?</a>
+          </div>
+       </div>
+       <div class="field">
+          <input type="submit" value="Login" class="btn btn--green btn--login">
+       </div>
+       <div class="signup-link">
+          Not a member? <a href="#" class="signup">Signup now</a>
+       </div>
+    </form>
+ </div>
+
+ <div class="wrapper wrapper--2" id="wrapper2">
+  <div class="title">
+     SignUp 
+  </div>
+  <form action="#" class="login__form">
+     <div class="field">
+        <input type="email" required class="field__input">
+        <label class="field__label">Email Address</label>
+     </div>
+     <div class="field">
+        <input type="password" required class="field__input">
+        <label class="field__label">Password</label>
+     </div>
+     <div class="field">
+        <input type="password" required class="field__input">
+        <label class="field__label">confirm password</label>
+     </div>
+     
+     <div class="field">
+        <input type="submit" value="SignUp" class="btn btn--green btn--login">
+     </div>
+     <div class="signup-link">
+      Already a member? <a href="#" class="signin">Sign In</a>
+     </div>
+  </form>
+</div>
+<script src="/js/index.js"></script>
+</body>
+
