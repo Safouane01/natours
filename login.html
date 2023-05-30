@@ -7,6 +7,7 @@
   <title>Login</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="shortcut icon" href="/img/pep_logo.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body class="login">
   <div class="wrapper" id="wrapper">
@@ -19,7 +20,8 @@
           <label class="field__label">Adresse e-mail / ICE</label>
        </div>
        <div class="field">
-          <input type="password" required class="field__input">
+          <input type="password" required class="field__input login__password">
+          <span class="field__eye"><i class="fa-sharp fa-solid fa-eye" style="color: #999999; "></i></span>
           <label class="field__label">Mot de passe</label>
        </div>
        <div class="content">
@@ -44,22 +46,27 @@
   <div class="title">
    S'inscrire 
   </div>
-  <form action="#" class="login__form">
+  <form action=""" class="login__form">
      <div class="field">
-        <input type="email" required class="field__input">
+        <input type="text" required class="field__input">
         <label class="field__label">Adresse e-mail / ICE</label>
      </div>
      <div class="field">
-        <input type="password" required class="field__input">
-        <label class="field__label">Mot de passe</label>
+        <input type="password" required class="field__input signup__password">
+        <label class="field__label password__label">Mot de passe </label>
      </div>
      <div class="field">
-        <input type="password" required class="field__input">
-        <label class="field__label">Confirmer Mot de passe</label>
+        <input type="password" required class="field__input conf__password">
+        <label class="field__label password__label">Confirmer Mot de passe</label>
+     </div>
+     <div class="">
+      <p class="field__error-msg">
+         Mots de passe non correspondants
+      </p>
      </div>
      
      <div class="field">
-        <input type="submit" value="Créer un compte" class="btn btn--green btn--login">
+        <input type="submit" value="Créer un compte" class="btn btn--green btn--login signup__btn">
      </div>
      <div class="signup-link">
       Déjà membre?<a href="#" class="signin">Se connecter</a>
