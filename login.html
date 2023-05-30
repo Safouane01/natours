@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="/img/pep_logo.ico" type="image/x-icon">
+</head>
+<body class="login">
+  <div class="wrapper" id="wrapper">
+    <div class="title">
+      Se connecter 
+    </div>
+    <form action="#" class="login__form">
+       <div class="field">
+          <input type="text" required class="field__input">
+          <label class="field__label">Adresse e-mail</label>
+       </div>
+       <div class="field">
+          <input type="password" required class="field__input">
+          <label class="field__label">Mot de passe</label>
+       </div>
+       <div class="content">
+          <div class="checkbox">
+             <input type="checkbox" id="remember-me">
+             <label for="remember-me">Rester connecté(e)</label>
+          </div>
+          <div class="pass-link">
+             <a href="#">Mot de passe oublié ?</a>
+          </div>
+       </div>
+       <div class="field">
+          <input type="submit" value="Connexion" class="btn btn--green btn--login">
+       </div>
+       <div class="signup-link">
+         Non membre ? <a href="#" class="signup">Inscrivez-vous maintenant</a>
+       </div>
+    </form>
+ </div>
+
+ <div class="wrapper wrapper--2" id="wrapper2">
+  <div class="title">
+   S'inscrire 
+  </div>
+  <form action="#" class="login__form">
+     <div class="field">
+        <input type="email" required class="field__input">
+        <label class="field__label">Adresse e-mail</label>
+     </div>
+     <div class="field">
+        <input type="password" required class="field__input">
+        <label class="field__label">Mot de passe</label>
+     </div>
+     <div class="field">
+        <input type="password" required class="field__input">
+        <label class="field__label">Confirmer Mot de passe</label>
+     </div>
+     
+     <div class="field">
+        <input type="submit" value="Créer un compte" class="btn btn--green btn--login">
+     </div>
+     <div class="signup-link">
+      Déjà membre?<a href="#" class="signin">Se connecter</a>
+     </div>
+  </form>
+</div>
+<script src="/js/index.js"></script>
+</body>
+
