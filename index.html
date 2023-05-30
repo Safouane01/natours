@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/icon-font.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="shortcut icon" href="/img/pep_logo.ico" type="image/x-icon">
 
 
@@ -61,8 +62,8 @@
 
           </h1>
         </div>
-        <div class="about__row">
-          <div class="about__col">
+        <div class="about__row " >
+          <div class="about__col" data-aos="fade-right">
             <div class="about__text-box u-margin-bottom-medium">
               <h2 class="heading-thertiary u-margin-bottom-small">renforcer l'autonomie et la responsabilité des exploitants agricoles</h2>
               <p class="paragraph">Permettre aux exploitants agricoles de s’enregistrer, enregistrer leurs exploitations, créer le registre relatif à chaque exploitation et alimenter ce registre avec les données d’entretien des cultures pratiquées et des quantités mises sur le marché ;
@@ -75,7 +76,7 @@
             </div>
             <a href="https://www.onssa.gov.ma" target="_blank" class="btn__secondary btn__secondary--green">En savoir plus &RightArrow;</a>
           </div>
-          <div class="about__col">
+          <div class="about__col" data-aos="fade-left">
             <div class="about__img-box about__img-box--1">
               <img src="/img/pic2.jpg" alt="nature">
             </div>
@@ -92,32 +93,33 @@
 
       <section class="feature u-margin-bottom-small" id="accomplissements">
         <div class="feature__card-container">
-          <div class="feature__card u-center-text">
+          <div class="feature__card u-center-text" data-aos="fade-right">
             <i class="icon-basic-world u-margin-bottom-xs"></i>
             <h2 class="heading-thertiary u-margin-bottom-small">Unis pour l'avenir agricole</h2>
             <p class="feature__paragraph">Découvrez la force de la communauté agricole avec plus de 7000 exploitants enregistrés
             </p>
           </div>
-          <div class="feature__card u-center-text">
+          <div class="feature__card u-center-text" data-aos="fade-right" data-aos-delay="150" >
             <i class="icon-basic-compass u-margin-bottom-xs"></i>
             <h2 class="heading-thertiary u-margin-bottom-small">Un site qui fait pousser l'avenir</h2>
             <p class="feature__paragraph"> 227 869 tonnes de pépinière enregistrées grâce à notre communauté agricole engagée.
             </p>
           </div>
-          <div class="feature__card u-center-text">
+          <div class="feature__card u-center-text" data-aos="fade-right" data-aos-delay="300">
             <i class="icon-basic-map u-margin-bottom-xs"></i>
             <h2 class="heading-thertiary u-margin-bottom-small">Enregistrement agricole révolutionnaire</h2>
             <p class="feature__paragraph">191 401 hectares bénéficient de notre site pour une agriculture florissante.</p>
           </div>
-          <div class="feature__card u-center-text">
+          <div class="feature__card u-center-text" data-aos="fade-right" data-aos-delay="450">
             <i class="icon-basic-heart u-margin-bottom-xs"></i>
             <h2 class="heading-thertiary u-margin-bottom-small">Révolutionnant la gestion agricole</h2>
             <p class="feature__paragraph">Notre platforme a informatisé avec succès 20 registres, simplifiant ainsi le suivi et la gestion des exploitations.</p>
           </div>
         </div>
       </section> 
-      <section class="booking" id="déclaration">
-        <div class="booking__container">
+      <section class="booking"  id="déclaration">
+        
+        <div class="booking__container" >
           <div class="booking__content">
             <div class="u-margin-bottom-medium">
               <h1 class="heading-secondary" ">Commencez votre déclaration</h1>
@@ -233,7 +235,7 @@
         <a href="#populartours" class="popup__close">&#10005;
         </a>
         <div class="popup__col-1">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d26462.05876803534!2d-6.857622!3d33.998766!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda76cf2e4134fb7%3A0x7f70ef465786b82b!2sONSSA!5e0!3m2!1sfr!2sma!4v1685410336343!5m2!1sfr!2sma" width="400" height="330" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d26462.05876803534!2d-6.857622!3d33.998766!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda76cf2e4134fb7%3A0x7f70ef465786b82b!2sONSSA!5e0!3m2!1sfr!2sma!4v1685410336343!5m2!1sfr!2sma" width="420" height="330" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
 
         <div class="popup__col-2">
@@ -249,5 +251,9 @@
       </div>
 
   <script src="js/home.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   </body>
 </html>
