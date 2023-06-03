@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Boxicons -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<!-- My CSS -->
+	<link rel="stylesheet" href="style.css">
+
+	<title>AdminHub</title>
+</head>
+<body>
+
+
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<a href="#" class="brand">
+			<!-- <i class='bx bxs-smile'></i> -->
+			<div class="logo bx"></div>
+			<span class="text">AdminHub</span>
+		</a>
+		<ul class="side-menu top">
+			<li class="active">
+				<a href="#">
+					<i class='bx bxs-dashboard' ></i>
+					<span class="text">Dashboard</span>
+				</a>
+			</li>
+			
+			
+			<!-- <li>
+				<a href="#">
+					<i class='bx bxs-group' ></i>
+					<span class="text">Team</span>
+				</a>
+			</li> -->
+		</ul>
+		<ul class="side-menu">
+			<li>
+				<a href="#">
+					<i class='bx bxs-cog' ></i>
+					<span class="text">Paramètres</span>
+				</a>
+			</li>
+			<li>
+				<a href="#" class="logout">
+					<i class='bx bxs-log-out-circle' ></i>
+					<span class="text">Déconnexion</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+
+
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu' ></i>
+			<form action="#">
+				<div class="form-input">
+					<input type="search" placeholder="Search...">
+					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+				</div>
+			</form>
+			<input type="checkbox" id="switch-mode" hidden>
+			<label for="switch-mode" class="switch-mode"></label>
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<main>
+			<div class="head-title">
+				<div class="left">
+					<h1>Dashboard</h1>
+					<ul class="breadcrumb">
+						<li>
+							<a href="#">Dashboard</a>
+						</li>
+						<li><i class='bx bx-chevron-right' ></i></li>
+						<li>
+							<a class="active" href="#">Home</a>
+						</li>
+					</ul>
+				</div>
+				<!-- <a href="#" class="btn-download">
+					<i class='bx bxs-cloud-download' ></i>
+					<span class="text">Download PDF</span>
+				</a> -->
+			</div>
+
+			<ul class="box-info">
+				<li>
+					<i class='bx bxs-calendar-check' ></i>
+					<span class="text">
+						<h3>20</h3>
+						<p>Nouvelle déclaration</p>
+					</span>
+				</li>
+				<li>
+					<i class='bx bxs-group' ></i>
+					<span class="text">
+						<h3>200</h3>
+						<p>Visiteur</p>
+					</span>
+				</li>
+			</ul>
+
+
+			<div class="table-data">
+				<div class="order">
+					<div class="head">
+						<h3>Déclaration récente</h3>
+						<form action="#" >
+							<div class="users-search  ">
+								<input type="search" placeholder="Search...">
+								<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+							</div>
+						</form>
+						<i class='bx bx-filter' ></i>
+					</div>
+					<table>
+						<thead>
+							<tr>
+								<th>Nom et prénom</th>
+								<th>Non de la pépinière</th>
+								<th>ICE</th>
+								<th>État</th>
+							</tr>
+						</thead>
+						<tbody>
+							
+								<tr class="user__info">
+									<td>
+										<p>Safouane</p>
+									</td>
+									<td>XXX</td>
+									<td>DV999</td>
+									<td><span class="status completed">Conforme</span></td>
+									<td><button class="status completed btn--plus">Voir plus &rarr;</button></td>
+								</tr>
+						
+							<tr class="user__info">
+								<td>
+									<p>Mehdi</p>
+								</td>
+								<td>XXX</td>
+								<td>DV999</td>
+								<td><span class="status pending">Non conforme</span></td>
+								<td><button class="status completed btn--plus">Voir plus &rarr;</button></td>
+
+							</tr>
+							<tr class="user__info">
+								<td>
+									<p>Achraf</p>
+								</td>
+								<td>XXX</td>
+								<td>DV999</td>
+
+								<td><span class="status process">En cours.</span></td>
+								<td><button class="status completed btn--plus">Voir plus &rarr;</button></td>
+
+							</tr>
+							<tr class="user__info">
+								<td>
+									<p>3ellal</p>
+								</td>
+								<td>XXX</td>
+								<td>DV999</td>
+
+								<td><span class="status pending">Non conforme</span></td>
+								<td><button class="status completed btn--plus">Voir plus &rarr;</button></td>
+
+							</tr>
+							<tr class="user__info">
+								<td>
+									<p>Thammi</p>
+								</td>
+								<td>XXX</td>
+								<td>DV999</td>
+								<td><span class="status completed">Conforme</span></td>
+								<td><button class="status completed btn--plus">Voir plus &rarr;</button></td>
+
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- <div class="todo">
+					<div class="head">
+						<h3>Todos</h3>
+						<i class='bx bx-plus' ></i>
+						<i class='bx bx-filter' ></i>
+					</div>
+					<ul class="todo-list">
+						<li class="completed">
+							<p>Todo List</p>
+							<i class='bx bx-dots-vertical-rounded' ></i>
+						</li>
+						<li class="completed">
+							<p>Todo List</p>
+							<i class='bx bx-dots-vertical-rounded' ></i>
+						</li>
+						<li class="not-completed">
+							<p>Todo List</p>
+							<i class='bx bx-dots-vertical-rounded' ></i>
+						</li>
+						<li class="completed">
+							<p>Todo List</p>
+							<i class='bx bx-dots-vertical-rounded' ></i>
+						</li>
+						<li class="not-completed">
+							<p>Todo List</p>
+							<i class='bx bx-dots-vertical-rounded' ></i>
+						</li>
+					</ul>
+				</div> -->
+			</div>
+		</main>
+		<!-- MAIN -->
+	</section>
+	<!-- CONTENT -->
+	<section class="info hidden">
+		<span class="close">&#215;</span>
+		<div class="info__pepiniereste info__pep">
+			<p id="nom-user"><span class="label">Nom et prénom:</span><span class="value"></span> Mehdi</p>
+			<p id="cin-user"><span class="label">CIN:</span><span class="value"></span> Q30299</p>
+			<p id="adresse-user"><span class="label">Adresse:</span><span class="value"></span> INPT, Chambre-119</p>
+		</div>
+		<div class="info__pepiniere info__pep">
+			<p id="nom-pep"><span class="label">Nom de la pépinière:</span><span class="value"></span> XXX</p>
+			<p id="address-pep"><span class="label">Adresse de la pépinière:</span><span class="value"></span> INPT-Resstoo</p>
+			<p id="ice"><span class="label">ICE:</span><span class="value"></span> JK31093</p>
+			<p id="rc"><span class="label">RC:</span><span class="value"></span> D10992</p>
+		</div>
+		<div class="info__declaration">
+			<div>
+				<p id="esp"><span class="label">Espèce:</span>XXX</p>
+				<p id="var"><span class="label">Variété:</span>XXX </p>
+				<p id="nb-var""><span class="label">Nombre:</span>130</p>
+
+			</div>
+
+			<div>
+				<p id="esp"><span class="label">Espèce:</span>ZZZ</p>
+				<p id="var"><span class="label">Variété:</span>ZZZ </p>
+				<p id="nb-var""><span class="label">Nombre:</span>300</p>
+			</div>
+		</div>
+		<div class="info__action">
+			<div class="action--cd">
+				<div class="title">
+					<h4 data-control="cd" class="action--title">Contrôle documentaire</h4>
+					<i data-control="cd" class="fa-solid fa-chevron-down arrow-icon"></i>
+				</div>
+				<div data-control="cd" class="action--btn hidden-btn">
+					<button class="status pending" id="cd-conforme">Non conforme</button>
+					<button class="status completed " id="cd-non-conforme">Conforme</button>
+				</div>
+			</div>
+			<div class="action--ph1">
+				<div class="title">
+					<h4 data-control="cp1" class="action--title">  1er contrôle phytosanitaire</h4>
+					<i data-control="cp1" class="fa-solid fa-chevron-down arrow-icon"></i>
+				</div>
+				<div data-control="cp1" class="action--btn hidden-btn">
+					<button class="status pending" id="cp1-conforme">Non conforme</button>
+					<button class="status completed " id="cp1-non-conforme">Conforme</button>
+				</div>
+			</div>
+			<div class="action--ph2">
+				<div class="title">
+					<h4 data-control="cp2" class="action--title">  2ème contrôle phytosanitaire</h4>
+					<i data-control="cp2" class="fa-solid fa-chevron-down arrow-icon"></i>
+				</div>
+				<div data-control="cp2" class="action--btn hidden-btn">
+					<button class="status pending" id="cp2-conforme">Non conforme</button>
+					<button class="status completed " id="cp2-non-conforme">Conforme</button>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="overlay hidden"></div>
+
+	<script src="script.js"></script>
+</body>
+</html>
